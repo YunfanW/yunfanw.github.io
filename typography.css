@@ -1,0 +1,196 @@
+/* Shared type and spacing system; loaded after page-specific layout styles. */
+:root {
+  --font-site: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --type-name: 60px;
+  --type-title: 44px;
+  --type-section: 24px;
+  --type-featured: 26px;
+  --type-emphasis: 19px;
+  --type-body: 18px;
+  --type-meta: 16px;
+  --type-label: 14px;
+  --leading-title: 1.2;
+  --leading-section: 1.4;
+  --leading-item: 1.5;
+  --leading-meta: 1.65;
+  --leading-prose: 1.8;
+  --space-caption: 4px;
+  --space-small: 8px;
+  --space-heading: 12px;
+  --space-prose: 16px;
+  --space-title: 20px;
+  --space-row: 24px;
+  --space-card: 32px;
+  --space-section: 40px;
+  --space-page-top: 56px;
+  --space-page-bottom: 64px;
+}
+
+body {
+  font-family: var(--font-site);
+  font-size: var(--type-body);
+  line-height: var(--leading-prose);
+}
+
+button, input, select, textarea { font-family: inherit; }
+
+.wordmark {
+  font: 600 var(--type-featured)/1.4 var(--font-site);
+  letter-spacing: -.6px;
+}
+
+.home-page h1,
+.page-heading h1,
+.cat-intro h1,
+.teaching-page .page-heading h1 {
+  font: 600 var(--type-title)/var(--leading-title) var(--font-site);
+  letter-spacing: -1.4px;
+  margin-bottom: var(--space-title);
+}
+
+.home-page h1 {
+  font-size: var(--type-name);
+  letter-spacing: -1.8px;
+}
+
+.paper h2,
+.pipeline h2,
+.teaching-page .teaching-primary-heading,
+.teaching-page .teaching-ta-heading {
+  font: 600 var(--type-section)/var(--leading-section) var(--font-site);
+  letter-spacing: 0;
+}
+
+/* The award keeps the larger emphasis previously requested. */
+.teaching-page .teaching-award h2 {
+  font: 600 var(--type-featured)/1.4 var(--font-site);
+  letter-spacing: 0;
+}
+.teaching-page .teaching-award-years {
+  font: 400 var(--type-emphasis)/1.6 var(--font-site);
+}
+
+.intro,
+.page-description,
+.paper-summary,
+details,
+.detail-content,
+.cat-description {
+  font: 400 var(--type-body)/var(--leading-prose) var(--font-site);
+}
+
+.pipeline strong,
+.teaching-page .teaching-course-name,
+.teaching-page .teaching-ta-course h4,
+.teaching-page .teaching-score strong {
+  font: 600 var(--type-body)/var(--leading-item) var(--font-site);
+  letter-spacing: 0;
+}
+
+.home-page .role {
+  font: 500 var(--type-body)/1.6 var(--font-site);
+}
+.home-contact a {
+  font: 400 var(--type-body)/1.6 var(--font-site);
+}
+
+nav,
+.menu-toggle,
+.button,
+.text-link,
+.hero-actions .text-link,
+summary {
+  font: 500 var(--type-meta)/1.5 var(--font-site);
+}
+
+.affiliation,
+.home-completion,
+.authors,
+.paper-status,
+.pipeline li span,
+.teaching-page .teaching-course-meta,
+.teaching-page .teaching-ta-course p,
+.teaching-page .teaching-score span,
+.teaching-page .teaching-score-caption {
+  font: 400 var(--type-meta)/var(--leading-meta) var(--font-site);
+}
+
+.paper-number {
+  font: 500 var(--type-body)/1.5 var(--font-site);
+}
+.eyebrow,
+.paper-category,
+.status-label,
+footer {
+  font-family: var(--font-site);
+  font-size: var(--type-label);
+  line-height: 1.55;
+}
+
+/* Match page openings and use the same vertical rhythm within each layout. */
+.document-section {
+  padding-top: var(--space-page-top);
+  padding-bottom: var(--space-page-bottom);
+}
+.home-page .hero,
+.cat-intro {
+  padding-top: var(--space-page-top);
+  padding-bottom: var(--space-section);
+}
+.cat-intro { align-items: start; }
+.page-heading,
+.teaching-page .page-heading { margin-bottom: var(--space-section); }
+.page-description { margin-bottom: 0; }
+.cat-description + .cat-description,
+.intro p + p { margin-top: var(--space-prose); }
+
+.home-page .hero-copy > .eyebrow { margin-bottom: var(--space-row); }
+.home-page .affiliation { margin-bottom: var(--space-row); }
+.home-completion { margin-top: var(--space-prose); }
+.home-page .hero-actions { margin-top: var(--space-row); }
+.home-contact { padding-top: var(--space-row); padding-bottom: var(--space-row); }
+
+.paper { padding-top: var(--space-card); padding-bottom: var(--space-card); }
+.paper h2 { margin-bottom: var(--space-heading); }
+.paper-meta { gap: var(--space-heading); }
+.authors { margin-bottom: var(--space-small); }
+.paper-status,
+.paper-summary { margin-bottom: var(--space-prose); }
+.detail-content { margin-top: var(--space-prose); padding: var(--space-prose) var(--space-title); }
+.pipeline { margin-top: var(--space-row); padding: var(--space-card); }
+.pipeline h2 { margin-bottom: var(--space-row); }
+.pipeline li { padding-bottom: var(--space-row); }
+.pipeline li:last-child { padding-bottom: 0; }
+.pipeline li span { margin-top: var(--space-small); }
+
+.teaching-page .teaching-primary-heading,
+.teaching-page .teaching-ta-heading { padding-bottom: var(--space-prose); }
+.teaching-page .teaching-course { padding-top: var(--space-row); padding-bottom: var(--space-row); }
+.teaching-page .teaching-course-name,
+.teaching-page .teaching-ta-course h4 { margin-bottom: var(--space-caption); }
+.teaching-page .teaching-ta-section { margin-top: var(--space-section); }
+.teaching-page .teaching-ta-course { padding-top: var(--space-prose); padding-bottom: var(--space-prose); }
+.teaching-page .teaching-award h2 { margin-bottom: var(--space-heading); }
+.teaching-page .teaching-certificate { margin-top: var(--space-row); }
+
+.cat-gallery { padding-top: var(--space-card); padding-bottom: var(--space-page-bottom); }
+footer { padding-top: var(--space-row); padding-bottom: var(--space-row); }
+
+@media (max-width: 760px) {
+  :root {
+    --space-page-top: 40px;
+    --space-page-bottom: 48px;
+    --space-section: 32px;
+  }
+}
+
+@media (max-width: 540px) {
+  :root { --type-name: 44px; --type-title: 34px; }
+  .paper { padding-top: var(--space-row); padding-bottom: var(--space-row); }
+  .pipeline { padding: var(--space-row); }
+  .home-page h1,
+  .page-heading h1,
+  .cat-intro h1,
+  .teaching-page .page-heading h1 { letter-spacing: -.8px; }
+  .wordmark { font-size: 24px; }
+}

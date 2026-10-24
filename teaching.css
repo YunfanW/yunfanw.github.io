@@ -1,0 +1,47 @@
+/* Teaching uses one typeface, with experience beside the award and certificate. */
+.teaching-page{--teaching-award-width:380px;--teaching-column-gap:56px}
+.teaching-page main{max-width:1160px}
+.teaching-page .page-heading{max-width:calc(100% - var(--teaching-award-width) - var(--teaching-column-gap));margin-bottom:44px}
+.teaching-page .page-heading h1{font:600 48px/1.2 var(--sans);letter-spacing:-1.4px;margin-bottom:20px}
+.teaching-page .teaching-grid{display:grid;grid-template-columns:minmax(0,1fr) var(--teaching-award-width);gap:var(--teaching-column-gap);align-items:start}
+.teaching-page .teaching-experience{min-width:0}
+.teaching-page .teaching-primary-heading,.teaching-page .teaching-ta-heading{font:600 24px/1.4 var(--sans);letter-spacing:0;margin:0;padding-bottom:16px;border-bottom:1px solid #aab8ae}
+.teaching-page .teaching-course{display:grid;grid-template-columns:minmax(0,1fr) 140px;gap:32px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.teaching-page .teaching-course:last-child{border-bottom:0}
+.teaching-page .teaching-course>div{min-width:0}
+.teaching-page .teaching-course-name{font:600 18px/1.5 var(--sans);letter-spacing:0;margin:0 0 5px}
+.teaching-page .teaching-course-meta{font:400 16px/1.6 var(--sans);color:var(--muted);margin:0}
+.teaching-page .teaching-evaluation{text-align:right;font-variant-numeric:tabular-nums}
+.teaching-page .teaching-score{display:flex;justify-content:flex-end;align-items:baseline;gap:3px;line-height:1.5;color:var(--green);margin:0 0 3px}
+.teaching-page .teaching-score strong{font:600 18px/1.5 var(--sans)}
+.teaching-page .teaching-score span{font:400 16px/1.5 var(--sans);color:var(--muted)}
+.teaching-page .teaching-score-caption{font:400 16px/1.5 var(--sans);color:var(--muted);margin:0}
+.teaching-page .teaching-ta-section{margin-top:36px}
+.teaching-page .teaching-ta-course{padding:14px 0;border-bottom:1px solid var(--line)}
+.teaching-page .teaching-ta-course:last-child{border-bottom:0}
+.teaching-page .teaching-ta-course h4{font:500 18px/1.5 var(--sans);letter-spacing:0;margin:0 0 4px}
+.teaching-page .teaching-ta-course p{font:400 16px/1.6 var(--sans);color:var(--muted);margin:0}
+.teaching-page .teaching-award{min-width:0;margin:0;padding:0;border:0}
+.teaching-page .teaching-award h2{font:600 26px/1.4 var(--sans);letter-spacing:0;margin:0 0 12px}
+.teaching-page .teaching-award-years{font:400 19px/1.6 var(--sans);color:var(--muted);margin:0}
+.teaching-page .teaching-grid p,.teaching-page .teaching-grid h2,.teaching-page .teaching-grid h3,.teaching-page .teaching-grid h4{hyphens:none}
+.teaching-page .teaching-certificate{margin:20px 0 0}
+.teaching-page .teaching-certificate a{display:block}
+.teaching-page .teaching-certificate img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+@media(min-width:951px){
+  .teaching-page .teaching-award{width:calc(100% + clamp(8px,calc((100vw - 1160px)/4 + 8px),24px));margin-left:clamp(4px,calc((100vw - 1160px)/4 + 4px),24px)}
+}
+@media(max-width:950px){
+  .teaching-page .page-heading{max-width:780px}
+  .teaching-page .teaching-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  .teaching-page .teaching-award{padding-top:24px;border-top:1px solid var(--line)}
+  .teaching-page .teaching-certificate{max-width:680px}
+}
+@media(max-width:540px){
+  .teaching-page .page-heading{margin-bottom:32px}
+  .teaching-page .page-heading h1{font-size:36px;letter-spacing:-.8px}
+  .teaching-page .teaching-course{grid-template-columns:minmax(0,1fr);gap:10px;padding:20px 0}
+  .teaching-page .teaching-evaluation{display:flex;align-items:baseline;gap:12px;text-align:left}
+  .teaching-page .teaching-score{justify-content:flex-start;margin:0}
+  .teaching-page .teaching-ta-section{margin-top:32px}
+}
