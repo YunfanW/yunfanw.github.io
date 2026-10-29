@@ -26,6 +26,7 @@
 .teaching-page .teaching-award-years{font:400 19px/1.6 var(--sans);color:var(--muted);margin:0}
 .teaching-page .teaching-grid p,.teaching-page .teaching-grid h2,.teaching-page .teaching-grid h3,.teaching-page .teaching-grid h4{hyphens:none}
 .teaching-page .teaching-certificate{margin:20px 0 0}
+.teaching-page .teaching-certificate figcaption{margin-bottom:12px}
 .teaching-page .teaching-certificate a{display:block}
 .teaching-page .teaching-certificate img{display:block;width:100%;height:auto;border:1px solid var(--line)}
 @media(min-width:951px){
